@@ -1,0 +1,319 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+html{
+    background: linear-gradient(to left, transparent ,#848997),
+                linear-gradient(to right, transparent ,#848997);
+}
+
+body {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 800px;
+    flex: 1;
+    margin: auto;
+    background: #7d9bd6;
+   
+}
+
+header {
+    background: #385898;
+}
+
+header h2 {
+    font-size: 18px;
+    position: absolute;
+    padding: 3px;
+    margin-top:10px;
+    margin-left: 5px;
+    font-family: 'Trebuchet MS';
+    color: rgb(243, 215, 10);
+    border: 2px solid rgb(243, 215, 10);
+    border-radius: 10px;
+}
+
+header ul {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+header ul li {    
+    list-style-type: none;
+}
+
+header ul li a {
+    display: block;
+    color: rgb(218, 218, 255);
+    text-decoration: none;
+    font-size: 14px;
+    width: 150px;    
+    line-height: 50px;
+    text-align: center;    
+}
+
+#aktivniStranka a {
+    border-bottom: 1px solid grey;
+    background: #7d9bd6;
+    color: #003193;
+    cursor:initial
+}
+
+header ul li a:hover {
+    background: #0055ff;
+}
+/* zobrazeni     "ulozeno"    */
+#ulozeno {
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #116c11;
+}
+
+/* navigace nad tabulkou */
+.nadTabulkou {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#openModal {
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 10px;    
+    background: green;
+    color: white;
+}
+
+#openModal:hover {
+    background-color: rgb(69, 171, 62);
+    cursor: pointer;
+}
+/* Tabulka zacatek */
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+          
+}
+
+thead {
+    display: block;            
+}
+
+th, td {
+    border: 1px solid black;
+    height: 35px;
+    padding: 4px;
+    width: 140px;
+}
+
+th {
+    background: #385898;
+    color: white;
+
+}
+
+td {
+    border-left: none;
+    border-top: none;
+
+}
+
+#tabulka {
+    border: 1px solid black;
+    border-top: none;
+    height: 330px;
+    display: block;
+    overflow-y: scroll;
+    background: rgb(197, 209, 234);
+}
+
+.mazaci {
+    margin: 0 5px;
+    padding: 3px 8px;
+    background: rgb(255, 43, 43);
+    color: white;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+.editovaci {
+    margin: 0 5px;
+    padding: 3px 8px;
+    background: #385898;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Tabulka konec */
+
+/* Pod Tabulkou */
+.podTabulkou {
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.podTabulkou p {
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 10px;    
+
+}
+
+#smaz {
+    background: rgb(255, 43, 43);
+}
+
+#smaz:hover {
+    cursor: pointer;
+    background: rgb(255, 71, 71);
+}
+
+#nacti {
+    background-color: chocolate;
+}
+
+#nacti:hover {
+    cursor: pointer;
+    background-color: rgb(255, 128, 37);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #385898;
+    height: 30px;
+    
+}
+
+footer p {
+    font-size: 14px;
+    height: 30px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+/*  modal   */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50vw;
+    transform: translate(-50%,0%); 
+    top: 70px;
+    width: 600px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #385898;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    margin-top: 80px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+.modal-content h2 {
+    margin: 15px auto 15px auto;
+    text-align: center;
+    color: white;
+}
+
+.modal-content input,label {   
+    font-size: 16px;
+    
+}
+
+.modal-content label {
+    color:white;
+    display: inline-block; 
+    width: 120px;
+    margin: 10px 0px 10px 30px;
+}
+
+
+.modal-content input {
+    border: 1px solid gray;
+    height: 25px;
+    padding: 5px ;
+     
+}
+
+.modal-content button {
+    display: block;
+    width: 80px;
+    height: 25px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/*  konec modal  */
+
+/* dalsi stranky */
+
+.oNecem h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+.oNecem p {
+    text-align: center;
+    margin: 15px;
+}
+
+.oNecem img {
+    display: flex;
+    margin: auto;
+}
+
+
+/* vycisteni float */  
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylEvidence.css">
+    <title>Evidence Pojistencu</title>
+</head>
+<body>
+        <header>
+            <h2>EvidenceRL</h2>
+            <ul>
+                <li id="aktivniStranka"><a href="#">Seznam Pojistencu</a></li>
+                <li><a href="oAplikaci.html">O aplikaci</a></li>
+                <li><a href="oAutorovi.html">O autorovi</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </header>
+
+        <main class="container">
+            <p id="ulozeno"></p>
+            <div class="nadTabulkou">
+                <p id="openModal">Pridat pojistence</p>
+                <p id="celkem"></p>
+            </div>
+            <div class="clearfix"></div>
+<!--   modal   zacatek      -->        
+            <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                    <h2>Pojištěnec</h2>
+                <form id="novyPojistenec">
+                    <label for="jmeno">Jméno:</label>
+                    <input type="text" id="jmenoPojistence" placeholder="Karel" name="jmeno" required> <br>
+                    <label for="prijmeni">Příjmení:</label>
+                    <input type="text" id="prijmeniPojistence" placeholder="Novak" name="prijmeni" required> <br>
+                    <label for="rok">Rok narození:</label>
+                    <input type="number" id="narozeni" required> <br>
+                    <label for="rodne">Rodné číslo:</label>
+                    <input type="text" id="rd" placeholder="991209/1234" name="rodne" required> <br>
+               
+                    <button id="ulozit" type="submit">Uložit</button>
+                </form>               
+            </div>
+            </div>
+<!--   modal konec        -->
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jméno</th>
+                        <th>Příjmení</th>
+                        <th>Rok narození</th>
+                        <th>Rodné číslo</th>
+                        <th>Editovat/Smazat</th>
+                    </tr>
+                </thead>
+                <tbody id="tabulka">
+                </tbody>    
+            </table>
+            <div class="podTabulkou">
+                <p id="smaz">Smazat databazi</p>
+                <p id="nacti">Nacist cvicnou dtb</p>
+            </div>         
+        </main> 
+        
+        <footer>
+            <p>Copyright &#169; 2023 LaskaDesign</p>
+        </footer>    
+
+    <script src="./js/Pojistenec.js"></script>
+    <script src="./js/Evidence.js"></script>
+    <script src="./js/obsluha.js"></script>
+</body>
+</html>
